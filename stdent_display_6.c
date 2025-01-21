@@ -22,10 +22,11 @@ int main()
     }
 
     struct Student student;
+    int count=1;
     printf("Reading data from file:\n");
     while (fscanf(file, "%s %s %s", student.name, student.branch, student.place) != EOF)
     {
-        printf(" %d %s %d %s %d %s \n",strlen(student.name),student.name,strlen(student.branch),student.branch,strlen(student.place),student.place);
+        printf(" %d %s  %s  %s \n",count++,student.name,student.branch,student.place);
     }
 
     fclose(file);
